@@ -1,0 +1,8 @@
+<!--miniprogram/pages/myclass/myclass.wxml-->
+<view>
+
+我的班级：
+这个班有多少人交了作文，有多少人没交，
+点击交了的这些人，就可以去看到ta的作文
+
+</view>

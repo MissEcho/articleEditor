@@ -1,0 +1,16 @@
+/* miniprogram/pages/welcome/welcome.wxss */
+.loading-wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loading-wrap image{
+  margin-top: 80px;
+  height: 320px;
+}
+.loading-wrap view{
+  position: absolute;
+  bottom: 40px;
+  font-size: 14px;
+  color: #999999;
+}

@@ -1,0 +1,5 @@
+<!--miniprogram/pages/welcome/welcome.wxml-->
+<view class="loading-wrap">
+  <image  src="../../images/loading.jpg"></image>
+  <view>by @衣染</view>
+</view>
