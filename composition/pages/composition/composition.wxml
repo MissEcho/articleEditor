@@ -1,0 +1,4 @@
+<!--pages/composition.wxml-->
+<view>
+<rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+</view>

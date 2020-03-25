@@ -1,0 +1,8 @@
+<view class="editor-container">
+	<view class="article-count">字数：{{countNum}}</view>
+	<input class="article-title" placeholder="请输入作文题目"  name="title" value="{{article.title}}"></input>
+	<view class="grid-container">
+		<editor id="editor" class="ql-container" placeholder="{{placeholder}}" bindstatuschange="onStatusChange" bindready="onEditorReady" bindinput="onContentChange" bindblur="onNoFocus">
+		</editor>
+	</view>
+</view>
