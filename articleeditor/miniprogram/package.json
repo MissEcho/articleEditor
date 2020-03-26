@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lin-ui": "^0.7.5",
-    "weui-miniprogram": "^0.2.2"
+    "lin-ui": "^0.7.5"
   }
 }
