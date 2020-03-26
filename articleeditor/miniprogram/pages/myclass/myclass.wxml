@@ -1,8 +1,25 @@
 <!--miniprogram/pages/myclass/myclass.wxml-->
 <view>
-
-我的班级：
-这个班有多少人交了作文，有多少人没交，
-点击交了的这些人，就可以去看到ta的作文
+	<view>
+		<view>
+			<view> 欢迎，衣染老师</view>
+			<view>当前班级：初三一班</view>
+		</view>
+		<view>添加班级</view>
+	</view>
+	<view class="composition-container">
+		<!-- 当前班级的作业 -->
+    <l-icon name="add"> </l-icon>
+		<view class="composition-item">
+			<view>作文主题</view>
+      <view>作文描述</view>
+			<view class="">
+				已提交：39人 >
+			</view>
+			<view class="">
+				未提交：39人 >
+			</view>
+		</view>
+	</view>
 
 </view>
