@@ -1,25 +1,46 @@
 <!--miniprogram/pages/myclass/myclass.wxml-->
 <view>
 	<view>
-		<view>
+		<view class="top-container">
 			<view> 欢迎，衣染老师</view>
 			<view>当前班级：初三一班</view>
 		</view>
-		<view>添加班级</view>
+		<view class="">添加班级	<l-icon name="add"> </l-icon></view>
 	</view>
 	<view class="composition-container">
 		<!-- 当前班级的作业 -->
-    <l-icon name="add"> </l-icon>
-		<view class="composition-item">
-			<view>作文主题</view>
-      <view>作文描述</view>
-			<view class="">
-				已提交：39人 >
+		<l-card type="primary" plaintext="{{true}}" title="《有什么笑话可以笑一辈子?》">
+			<view class="content">
+				<view style="color:#999999;margin:10px 0">
+					描述：大雄要死掉了,他对妻子说:我死之后你找一个男人我就在地下打一一个滚。
+					说完就咽气了。某天妻子有事要找大雄，就去了地府问阎王找人，但是地府人那么多...
+				</view>
+				<view class="card-footer">
+					<view class="">
+						已提交：39人 <l-icon name="more" />
+					</view>
+					<view class="">
+						未提交：39人  <l-icon name="more" />
+					</view>
+				</view>
 			</view>
-			<view class="">
-				未提交：39人 >
+		</l-card>
+	<l-card type="primary" plaintext="{{true}}" title="《有什么笑话可以笑一辈子?》">
+			<view class="content">
+				<view style="color:#999999;margin:10px 0">
+					描述：大雄要死掉了,他对妻子说:我死之后你找一个男人我就在地下打一一个滚。
+					说完就咽气了。某天妻子有事要找大雄，就去了地府问阎王找人，但是地府人那么多...
+				</view>
+				<view class="card-footer">
+					<view class="">
+						已提交：39人 <l-icon name="right" />
+					</view>
+					<view class="">
+						未提交：39人  <l-icon name="right" />
+					</view>
+				</view>
 			</view>
-		</view>
+		</l-card>
 	</view>
 
 </view>
