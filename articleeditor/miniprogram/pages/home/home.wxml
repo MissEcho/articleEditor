@@ -1,17 +1,16 @@
 <!--home.wxml-->
 <view class="container">
-  <view class="user-role">
-    <view >老师</view>
-    <view>学生</view>
- </view>
-  <!-- <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+	<view class="input-wrap">
+		<l-input width="300" placeholder="请输入你的名字" hide-label="{{true}}" />
+	</view>
+	<view>
+	</view>
+ <view class="tip">选择一个你的身份：</view>  
+	<view class="user-role">
+		<view >老师</view>
+		<view class="">学生</view>
+	</view>
+  <view>
+  
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view> -->
 </view>

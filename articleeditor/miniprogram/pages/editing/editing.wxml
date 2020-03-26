@@ -1,6 +1,11 @@
 <view class="editor-container">
-	<view class="article-count">字数：{{countNum}}</view>
-	<input class="article-title" placeholder="请输入作文题目"  name="title" value="{{article.title}}"></input>
+	<view class="scroll-top">
+		<view class="flex-row">
+			<view class="article-count">字数：{{countNum}}</view>
+			<l-button size="mini" disabled>提交</l-button>
+		</view>
+		<input class="article-title" placeholder="请输入作文题目" name="title" value="{{article.title}}"></input>
+	</view>
 	<view class="grid-container">
 		<editor id="editor" class="ql-container" placeholder="{{placeholder}}" bindstatuschange="onStatusChange" bindready="onEditorReady" bindinput="onContentChange" bindblur="onNoFocus">
 		</editor>

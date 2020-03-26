@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/myclass/myclass",
-    "pages/im/room/room",
-    "pages/welcome/welcome",
     "pages/home/home",
+    "pages/editing/editing",
+    "pages/myclass/myclass",
+    "pages/welcome/welcome",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -15,7 +15,9 @@
     "pages/openapi/serverapi/serverapi",
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
-    "pages/im/im"
+    "pages/im/im",
+    "pages/im/room/room",
+    "pages/mytask/mytask"
   ],
   "window": {
     "backgroundColor": "#ffffff",
@@ -29,6 +31,8 @@
   "usingComponents": {
     "l-toast": "/miniprogram_npm/lin-ui/toast/index",
     "l-message": "/miniprogram_npm/lin-ui/message/index",
-    "l-icon": "/miniprogram_npm/lin-ui/icon/index"
+    "l-icon": "/miniprogram_npm/lin-ui/icon/index",
+    "l-button": "/miniprogram_npm/lin-ui/button/index",
+    "l-input": "/miniprogram_npm/lin-ui/input/index"
   }
 }

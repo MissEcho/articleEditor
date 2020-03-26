@@ -5,7 +5,7 @@
   align-items: center;
 }
 .loading-wrap image{
-  margin-top: 80px;
+  margin-top: 60px;
   height: 320px;
 }
 .loading-wrap view{
