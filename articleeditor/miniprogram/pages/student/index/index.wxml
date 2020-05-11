@@ -1,0 +1,60 @@
+<!--miniprogram/pages/student/index/index.wxml-->
+<view>
+	<view class="top-container">
+		<view> 欢迎，衣染童鞋</view>
+		<l-grid l-class="grid-wrap">
+			<l-grid-item key="one" slot="one">
+				<view class="num">初三1班</view>
+				<view class="text">当前班级</view>
+			</l-grid-item>
+			<l-grid-item key="two" slot="two">
+				<view class="num">陈可</view>
+				<view class="text">班主任</view>
+			</l-grid-item>
+			<l-grid-item key="three" slot="three">
+				<view class="num">
+					<l-icon name="order" color="rgba(255,255,255,.9)"> </l-icon>
+				</view>
+			</l-grid-item>
+		</l-grid>
+	</view>
+	<view class="composition-container">
+		<!-- 当前班级的作业 -->
+		<view class="card-item">
+			<l-card type="primary" plaintext="{{true}}" title="《有什么笑话可以笑一辈子?》">
+				<view class="content">
+					<view class="card-desc">
+						描述：大雄要死掉了,他对妻子说:我死之后你找一个男人我就在地下打一一个滚。
+						说完就咽气了。某天妻子有事要找大雄，就去了地府问阎王找人，但是地府人那么多...
+					</view>
+					<view class="card-footer">
+						<view class="">
+							2020-05-02 12:30:20
+						</view>
+						<view class="" data-type='delay' bindtap="gotoDetail">
+							已评分：96分
+							<l-icon name="more" />
+						</view>
+					</view>
+				</view>
+			</l-card>
+			<l-card type="primary" plaintext="{{true}}" title="《有什么笑话可以笑一辈子?》">
+				<view class="content">
+					<view class="card-desc">
+						描述：大雄要死掉了,他对妻子说:我死之后你找一个男人我就在地下打一一个滚。
+						说完就咽气了。某天妻子有事要找大雄，就去了地府问阎王找人，但是地府人那么多...
+					</view>
+					<view class="card-footer delay">
+						<view class="">
+							2020-05-02 12:30:20
+						</view>
+						<view class="c4" data-type='delay' bindtap="gotoEdit">
+							待完成：
+							<l-icon name="more" />
+						</view>
+					</view>
+				</view>
+			</l-card>
+		</view>
+	</view>
+</view>

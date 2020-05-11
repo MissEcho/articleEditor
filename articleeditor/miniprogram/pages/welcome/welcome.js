@@ -28,7 +28,7 @@ Page({
             console.log('[数据库] [查询记录] 成功: ', result)
             let redirectUrl='../home/home';
             if(result.data.length>0){
-              redirectUrl=result.data[0].userRole=='teacher'?'../myclass/myclass':'../editing/editing'
+              redirectUrl=result.data[0].userRole=='teacher'?'../teacher/index/index':'../editing/editing'
             }
             setTimeout(function(){
               wx.reLaunch({

@@ -5,12 +5,11 @@
 	</view>
 	<view>
 	</view>
- <view class="tip">选择一个你的身份：</view>  
+	<view class="tip">选择一个你的身份：</view>
 	<view class="user-role">
-		<view >老师</view>
-		<view class="">学生</view>
+		<view data-type="teacher" bindtap="chooseType">老师</view>
+		<view data-type="student" bindtap="chooseType" class="">学生</view>
 	</view>
-  <view>
-  
-  </view>
+	<view>
+	</view>
 </view>

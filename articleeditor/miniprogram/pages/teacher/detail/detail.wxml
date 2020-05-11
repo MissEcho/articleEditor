@@ -1,0 +1,27 @@
+<!--miniprogram/pages/teacher/detail/detail.wxml-->
+<view>
+	<l-card type="primary" plaintext="{{true}}" title="评语">
+		<view class="content">
+			<view class="card-desc">
+				文章立意深刻，有远见卓识之志。
+			</view>
+			<l-tag size="mini" shape="circle">99分</l-tag>
+		</view>
+	</l-card>
+
+	<view class="article-wrap">
+		<view class="article-top">
+			<view class="student-name">
+				李三
+			</view>
+			<view class="article-desc">
+				<view>如果我是神笔马良</view>
+				<view class="article-time">2020-05-13 12:40:10</view>
+			</view>
+		</view>
+		<view class="article-content">
+		</view>
+	</view>
+
+
+</view>

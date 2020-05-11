@@ -1,4 +1,4 @@
-/* miniprogram/pages/myclass/myclass.wxss */
+/* miniprogram/pages/student/index/index.wxss */
 .top-container{
   background-color: #065279;
   height: 100px;
@@ -16,7 +16,7 @@
 .card-footer{
   display: flex;
   flex-direction: row;
-
+  text-align: right;
 }
 .card-footer view{
   font-size: 14px;
@@ -27,6 +27,9 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.card-footer.delay view{
+  color: #e45e45;
 }
 .card-item{
   margin-top: 20px;

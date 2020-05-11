@@ -1,4 +1,4 @@
-// miniprogram/pages/myclass/myclass.js
+// miniprogram/pages/teacher/list/list.js
 Page({
 
   /**

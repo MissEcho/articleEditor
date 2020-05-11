@@ -1,10 +1,13 @@
 {
   "pages": [
-    "pages/home/home",
-    "pages/editing/editing",
-    "pages/myclass/myclass",
+    "pages/teacher/add/add",
+    "pages/teacher/index/index",
+    "pages/student/index/index",
+    "pages/student/editing/editing",
+    "pages/teacher/detail/detail",
+    "pages/teacher/list/list",
     "pages/welcome/welcome",
-    "pages/index/index",
+    "pages/home/home",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
@@ -17,7 +20,7 @@
     "pages/openapi/cloudid/cloudid",
     "pages/im/im",
     "pages/im/room/room",
-    "pages/mytask/mytask"
+    "pages/index/index"
   ],
   "window": {
     "backgroundColor": "#ffffff",
@@ -33,6 +36,7 @@
     "l-message": "/miniprogram_npm/lin-ui/message/index",
     "l-icon": "/miniprogram_npm/lin-ui/icon/index",
     "l-button": "/miniprogram_npm/lin-ui/button/index",
-    "l-input": "/miniprogram_npm/lin-ui/input/index"
+    "l-input": "/miniprogram_npm/lin-ui/input/index",
+    "l-list": "/miniprogram_npm/lin-ui/list/index"
   }
 }

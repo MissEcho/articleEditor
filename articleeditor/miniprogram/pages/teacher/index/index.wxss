@@ -1,24 +1,28 @@
-/* miniprogram/pages/myclass/myclass.wxss */
-.top-container{
+/* miniprogram/pages/teacher/index/index.wxss */
+.top-container {
   background-color: #065279;
   height: 100px;
   color: #ffffff;
   padding: 20px;
 }
-.grid-wrap{
+
+.grid-wrap {
   margin-top: 30px;
 }
-.text{
+
+.text {
   /* margin-top: 5px; */
   color: rgba(255, 255, 255, .6);
   font-size: 12px;
 }
-.card-footer{
+
+.card-footer {
   display: flex;
   flex-direction: row;
 
 }
-.card-footer view{
+
+.card-footer view {
   font-size: 14px;
   color: #177cb0;
   flex: 1;
@@ -28,11 +32,18 @@
   justify-content: center;
   align-items: center;
 }
-.card-item{
+
+.card-item {
   margin-top: 20px;
 }
-.card-desc{
-  color:#999999;
-  margin:10px 0;
-  font-size:12px
+
+.card-desc {
+  color: #999999;
+  margin: 10px 0;
+  font-size: 12px
+}
+
+.add-task {
+  width: 80%;
+  margin: 10px auto;
 }

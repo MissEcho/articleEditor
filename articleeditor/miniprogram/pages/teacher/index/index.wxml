@@ -1,24 +1,25 @@
-<!--miniprogram/pages/myclass/myclass.wxml-->
+<!--miniprogram/pages/teacher/index/index.wxml-->
 <view>
-	<view>
-		<view class="top-container">
-			<view> 欢迎，衣染老师</view>
-			<l-grid l-class="grid-wrap">
-				<l-grid-item key="one" slot="one">
-					<view class="num">初三1班</view>
-					<view class="text">当前班级</view>
-				</l-grid-item>
-				<l-grid-item key="two" slot="two">
-					<view class="num">0832</view>
-					<view class="text">班级号</view>
-				</l-grid-item>
-				<l-grid-item key="three" slot="three">
-					<view class="num">
-						<l-icon name="add" color="rgba(255,255,255,.9)"> </l-icon>
-					</view>
-				</l-grid-item>
-			</l-grid>
-		</view>
+	<view class="top-container">
+		<view> 欢迎，衣染老师</view>
+		<l-grid l-class="grid-wrap">
+			<l-grid-item key="one" slot="one">
+				<view class="num">初三1班</view>
+				<view class="text">当前班级</view>
+			</l-grid-item>
+			<l-grid-item key="two" slot="two">
+				<view class="num">0832</view>
+				<view class="text">班级号</view>
+			</l-grid-item>
+			<l-grid-item key="three" slot="three">
+				<view class="num">
+					<l-icon name="add" color="rgba(255,255,255,.9)"> </l-icon>
+				</view>
+			</l-grid-item>
+		</l-grid>
+	</view>
+	<view class="add-task">
+		<l-button bindtap="gotoPage" icon="add" icon-size="20" icon-color="#fff">布置作业</l-button>
 	</view>
 	<view class="composition-container">
 		<!-- 当前班级的作业 -->
@@ -30,11 +31,11 @@
 						说完就咽气了。某天妻子有事要找大雄，就去了地府问阎王找人，但是地府人那么多...
 					</view>
 					<view class="card-footer">
-						<view class="">
+						<view class="" data-type='finished' bindtap="gotoList">
 							已提交：39人
 							<l-icon name="more" />
 						</view>
-						<view class="">
+						<view class="" data-type='delay' bindtap="gotoList">
 							未提交：39人
 							<l-icon name="more" />
 						</view>

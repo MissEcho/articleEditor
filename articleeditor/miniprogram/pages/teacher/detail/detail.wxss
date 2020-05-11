@@ -1,0 +1,48 @@
+/* miniprogram/pages/teacher/detail/detail.wxss */
+.card-desc {
+  color: #e45e45;
+  margin: 10px 0;
+  font-size: 12px
+}
+
+.article-wrap {
+  margin: 20rpx auto;
+}
+
+.article-top {
+  margin-top: 20px;
+  padding: 0 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.student-name {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 100rpx;
+  font-size: 12px;
+  color: #ffffff;
+  background-color: cadetblue;
+  text-align: center;
+}
+
+.article-desc {
+  width: calc(100vw - 220rpx);
+  justify-content: center;
+  justify-self: center;
+}
+
+.article-time {
+  margin-top: 5px;
+  color: #999999;
+  font-size: 12px;
+}
+.article-content{
+  width: 94%;
+  height: 200px;
+  border: 1px solid #efefef;
+  margin: 10px auto;
+}

@@ -1,4 +1,4 @@
-// miniprogram/pages/myclass/myclass.js
+// miniprogram/pages/teacher/index/index.js
 Page({
 
   /**
@@ -14,7 +14,15 @@ Page({
   onLoad: function (options) {
 
   },
-
+  gotoList: function (e) {
+    let type = e.currentTarget.dataset;
+    console.log(type);
+  },
+  gotoPage: function (e) {
+    wx.navigateTo({
+      url: '../add/add',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -28,6 +36,7 @@ Page({
   onShow: function () {
 
   },
+
 
   /**
    * 生命周期函数--监听页面隐藏
