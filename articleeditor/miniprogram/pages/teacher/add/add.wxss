@@ -10,3 +10,7 @@
 .textarea-height {
   height: 300px;
 }
+
+.checkbox-wrap {
+  margin-left: 20px;
+}

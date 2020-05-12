@@ -1,22 +1,22 @@
 <!--miniprogram/pages/teacher/list/list.wxml-->
 <view>
 	<l-tabs bind:linchange="changeTabs">
-		<l-tabpanel tab="待批改" key="one" slot="one">
+		<l-tabpanel tab="已提交" key="one" slot="one">
 			<view class="student-wrap">
-				<l-list title="李玲" gap="15" right-desc="92分" link-type="navigateTo" url="../detail/detail?id=1" />
-				<l-list title="张三" gap="15" right-desc="92分" />
-				<l-list title="李四" gap="15" right-desc="92分" />
-				<l-list title="菡萏" gap="15" right-desc="92分" />
-				<l-list title="子墨" gap="15" right-desc="92分" />
+				<l-list title="李玲（初三五班）"  dot-badge="{{true}}" gap="15" right-desc="待批改" link-type="navigateTo" url="../detail/detail?id=1" />
+				<l-list title="张三（初三五班）" gap="15" right-desc="92分" />
+				<l-list title="李四（初三五班）" gap="15" right-desc="92分" />
+				<l-list title="菡萏（初三五班）" gap="15" right-desc="92分" />
+				<l-list title="子墨（初三五班）" gap="15" right-desc="92分" />
 			</view>
 		</l-tabpanel>
-		<l-tabpanel tab="已批改" key="two" slot="two">
+		<l-tabpanel tab="未提交" key="two" slot="two">
 			<view class="student-wrap">
-				<l-list title="李玲" gap="15" right-desc="92分" link-type="navigateTo" url="../detail/detail?id=1" />
-				<l-list title="张三" gap="15" right-desc="92分" />
-				<l-list title="李四" gap="15" right-desc="92分" />
-				<l-list title="菡萏" gap="15" right-desc="92分" />
-				<l-list title="子墨" gap="15" right-desc="92分" />
+				<l-list title="李玲（初三五班）" gap="15" right-desc="提醒"  />
+				<l-list title="张三" gap="15" right-desc="提醒" />
+				<l-list title="李四" gap="15" right-desc="提醒" />
+				<l-list title="菡萏" gap="15" right-desc="提醒" />
+				<l-list title="子墨" gap="15" right-desc="提醒" />
 			</view>
 		</l-tabpanel>
 	</l-tabs>

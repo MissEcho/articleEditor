@@ -2,11 +2,11 @@
 <view>
 	<view class="top-container">
 		<view class="welcome-wrap">
-			<view>欢迎，衣染老师</view>
+			<view>欢迎，{{teacherName}}老师</view>
 			<view bindtap="showPupop">添加班级 <l-icon name="add" color="rgba(255,255,255,.9)"> </l-icon>
 			</view>
 		</view>
-		<l-grid l-class="grid-wrap" row-num="4" bindtap="gotoMember">
+		<l-grid l-class="grid-wrap" row-num="4" bindtap="gotoClassroom">
 			<l-grid-item key="one" slot="one">
 				<view class="num">初三1班</view>
 				<view class="text">当前班级</view>
@@ -38,11 +38,11 @@
 					</view>
 					<view class="card-footer">
 						<view class="" data-type='finished' bindtap="gotoList">
-							已提交：39人
+							已批改：23/39人
 							<l-icon name="more" />
 						</view>
 						<view class="" data-type='delay' bindtap="gotoList">
-							未提交：39人
+							未提交：9人
 							<l-icon name="more" />
 						</view>
 					</view>
@@ -54,12 +54,12 @@
 		<view class='pupop-content'>
 			<view class="pupop-title">新增班级</view>
 			<l-input width='675' label="班级名称" data-type="name" placeholder="请输入班级名称" bind:lininput="inputChange" value="{{classroom.name}}" />
-			<l-input width='675' label="班级号码" data-type="id" placeholder="请输入班级号码" bind:lininput="inputChange" value="{{classroom.no}}" />
+			<l-input width='675' label="班级号码" data-type="no" placeholder="请输入班级号码" bind:lininput="inputChange" value="{{classroom.no}}" />
 			<view class="operate-btn">
 				<l-button plain="true" bindtap="cancel">取消</l-button>
 				<l-button bindtap="submit">新增</l-button>
 			</view>
 		</view>
 	</l-popup>
-
+<l-message />
 </view>

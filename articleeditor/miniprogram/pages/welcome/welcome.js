@@ -30,11 +30,10 @@ Page({
             if(result.data.length>0){
               redirectUrl=result.data[0].userRole=='teacher'?'../teacher/index/index':'../editing/editing'
             }
-            setTimeout(function(){
-              wx.reLaunch({
-                url: redirectUrl,
-              })
-            },3000)
+            app.globalData.userData=result.data[0]
+            wx.reLaunch({
+              url: redirectUrl,
+            })
           },
           fail: err => {
             wx.showToast({

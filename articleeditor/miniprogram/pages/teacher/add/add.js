@@ -42,37 +42,34 @@ Page({
       "formData.taskTitle": e.detail.value
     })
   },
+  onChangeTap: function (e) {
+    let { classList } = this.data;
+    classList.map(item => {
+      item.id == e.detail.key ? item.isChecked = e.detail.checked : null;
+    })
+    this.setData({
+      classList
+    })
+  },
   getContentValue: function (e) {
     this.setData({
       "formData.taskContent": e.detail.value
     })
   },
-  lintapChoose: function (e) {
-    let classList = this.data.classList;
-    let className = this.data.classList.map(item => {
-      return item.name
-    })
-
-    let _this = this;
-    wx.showActionSheet({
-      itemList: className,
-      success(res) {
-        _this.setData({
-          'formData.class': classList[res.tapIndex].id,
-          className: className[res.tapIndex]
-        })
-      },
-      fail(res) {
-        console.log(res.errMsg)
-      }
-    })
-  },
   submitForm: function (e) {
-    console.log();
     let formData = this.data.formData;
     if (!formData.taskTitle) {
       wx.lin.showMessage({
         content: '请输入作文主题'
+      })
+      return false;
+    }
+    let classList = this.data.classList.filter(item => {
+      return item.isChecked == true
+    })
+    if (classList.length < 1) {
+      wx.lin.showMessage({
+        content: '请至少选择一个班级'
       })
       return false;
     }

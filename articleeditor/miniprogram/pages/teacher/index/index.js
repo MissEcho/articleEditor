@@ -1,11 +1,15 @@
 // miniprogram/pages/teacher/index/index.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    showPopup: true,
+    teacherName: '',
+    showPopup: false,
+    classes: [],
+    tasks: [],
     formData: {
       name: '',
       no: ''
@@ -16,7 +20,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let { userName, classes, tasks } = app.globalData.userData;
+    console.log(classes, tasks);
+    // 获取该老师下面的班级
+    // 获取该老师下面的作业
+    this.setData({
+      teacherName: userName,
+      classes,
+      tasks
+    })
   },
   showPupop: function (e) {
     this.setData({
@@ -42,14 +54,40 @@ Page({
   },
   submit: function (e) {
     // 新增成功之后，跳转至班级二维码页面；
-    wx.navigateTo({
-      url: '../classroom/classroom',
+    console.log(this.data.formData);
+    let { formData } = this.data;
+    if (!formData.name) {
+      wx.lin.showMessage({
+        content: '请输入班级名称'
+      })
+      return false;
+    }
+    if (!formData.no) {
+      wx.lin.showMessage({
+        content: '请输入班级号码'
+      })
+      return false;
+    }
+    wx.cloud.callFunction({
+      name: 'insertClass',
+      data: formData,
+      complete: (res) => {
+        console.log(res);
+      }
     })
+    this.setData({
+      showPopup: false
+    })
+    // wx.navigateTo({
+    //   url: '../classroom/classroom',
+    // })
 
   },
   gotoList: function (e) {
     let type = e.currentTarget.dataset;
-    console.log(type);
+    wx.navigateTo({
+      url: '../list/list',
+    })
   },
   gotoPage: function (e) {
     wx.navigateTo({
@@ -59,11 +97,6 @@ Page({
   gotoClassroom: function (e) {
     wx.navigateTo({
       url: '../classroom/classroom',
-    })
-  },
-  gotoMember: function (e) {
-    wx.navigateTo({
-      url: '../member/member',
     })
   },
   /**
