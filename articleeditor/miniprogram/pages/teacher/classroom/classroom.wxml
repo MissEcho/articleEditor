@@ -1,0 +1,13 @@
+<!--miniprogram/pages/teacher/classroom/classroom.wxml-->
+<view>
+	<view class="ecode-wrap">
+		<l-tag shape="square">初三五班（201204）</l-tag>
+		<image class="ecode-img" src="../../../images/ecode.png"></image>
+	</view>
+	<!-- 班级二维码，学生可加 -->
+	<l-list gap="20" title="查看班级成员"  link-type="navigateTo"  url="../member/member"/>
+	<l-list gap="20" title="分享二维码" />
+	<l-list gap="20" title="编辑" right-desc="修改班级" />
+	<l-list gap="20" title="删除" />
+
+</view>

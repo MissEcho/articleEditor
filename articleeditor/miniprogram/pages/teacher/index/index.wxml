@@ -1,8 +1,12 @@
 <!--miniprogram/pages/teacher/index/index.wxml-->
 <view>
 	<view class="top-container">
-		<view> 欢迎，衣染老师</view>
-		<l-grid l-class="grid-wrap">
+		<view class="welcome-wrap">
+			<view>欢迎，衣染老师</view>
+			<view bindtap="showPupop">添加班级 <l-icon name="add" color="rgba(255,255,255,.9)"> </l-icon>
+			</view>
+		</view>
+		<l-grid l-class="grid-wrap" row-num="4" bindtap="gotoMember">
 			<l-grid-item key="one" slot="one">
 				<view class="num">初三1班</view>
 				<view class="text">当前班级</view>
@@ -12,9 +16,11 @@
 				<view class="text">班级号</view>
 			</l-grid-item>
 			<l-grid-item key="three" slot="three">
-				<view class="num">
-					<l-icon name="add" color="rgba(255,255,255,.9)"> </l-icon>
-				</view>
+				<view class="num">23</view>
+				<view class="text">人</view>
+			</l-grid-item>
+			<l-grid-item key="four" slot="four">
+				<l-icon name="right" color="rgba(255,255,255,.9)"> </l-icon>
 			</l-grid-item>
 		</l-grid>
 	</view>
@@ -44,6 +50,16 @@
 			</l-card>
 		</view>
 	</view>
-	<!-- 增加一个布置作业的按钮，布置好了，学生可以下次登录的时候，可以立马收到， -->
+	<l-popup show="{{showPopup}}" content-align="center">
+		<view class='pupop-content'>
+			<view class="pupop-title">新增班级</view>
+			<l-input width='675' label="班级名称" data-type="name" placeholder="请输入班级名称" bind:lininput="inputChange" value="{{classroom.name}}" />
+			<l-input width='675' label="班级号码" data-type="id" placeholder="请输入班级号码" bind:lininput="inputChange" value="{{classroom.no}}" />
+			<view class="operate-btn">
+				<l-button plain="true" bindtap="cancel">取消</l-button>
+				<l-button bindtap="submit">新增</l-button>
+			</view>
+		</view>
+	</l-popup>
 
 </view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "l-tag": "../../miniprogram_npm/lin-ui/tag/index",
+    "l-form-item": "../../miniprogram_npm/lin-ui/form-item/index"
+  }
+}

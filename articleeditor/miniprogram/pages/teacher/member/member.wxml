@@ -1,0 +1,26 @@
+<!--miniprogram/pages/teacher/member/member.wxml-->
+<view>
+	<block wx:for="{{memberList}}" wx:key="id">
+		<l-slide-view auto-close height="140" width="750" slide-width="340" bindslideopen="onSlideOpenTap" data-id='1' close="{{close1}}" threshold="50">
+			<view slot="left" class="left">
+				<view class='left-con'>
+					<text class='left-title'>{{item.name}}</text>
+					<text class='left-time'>{{item.joinTime}}</text>
+				</view>
+			</view>
+			<view slot="right" class="right">
+				<text data-id="{{item.id}}" bindtap="showEdit">编辑</text>
+				<text data-id="{{item.id}}"  bindtap="deleteMember">删除</text>
+			</view>
+		</l-slide-view>
+		<view class='row'></view>
+	</block>
+	<!-- 改名字 -->
+	<l-popup show="{{showPopup}}" content-align="top">
+		<view class='pupop-content'>
+			<l-input placeholder="请输入新名字" bind:lininput="nameInput" value="{{newName}}" label="{{currentStudent.name}}" />
+			<l-button size="long" bindtap="getName">修改</l-button>
+		</view>
+	</l-popup>
+	<l-dialog />
+</view>

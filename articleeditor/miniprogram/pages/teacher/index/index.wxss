@@ -1,9 +1,20 @@
 /* miniprogram/pages/teacher/index/index.wxss */
 .top-container {
   background-color: #065279;
-  height: 100px;
   color: #ffffff;
   padding: 20px;
+}
+
+.welcome-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.welcome-wrap view {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .grid-wrap {
@@ -46,4 +57,23 @@
 .add-task {
   width: 80%;
   margin: 10px auto;
+}
+
+.pupop-content {
+  /* width: 100%; */
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.pupop-title {
+  text-align: center;
+  padding: 0px 0 20px 0;
+}
+
+.operate-btn {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }

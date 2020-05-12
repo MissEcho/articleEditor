@@ -1,0 +1,11 @@
+/* miniprogram/pages/teacher/classroom/classroom.wxss */
+.ecode-wrap {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.ecode-img {
+  margin: 20px 0;
+  width: 100px;
+  height: 100px;
+}

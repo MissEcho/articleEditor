@@ -1,9 +1,9 @@
 <!--pages/teacher/add/add.wxml-->
 <view>
-	<l-input label="标题" placeholder="请输入标题" />
-	<l-list gap="25" title="班级" />
+	<l-input label="主题" required bind:lininput="getTitleValue" value="{{formData.taskTitle}}" placeholder="请输入标题" />
+	<l-list gap="25" title="班级"   right-desc="{{className}}" bind:lintap="lintapChoose"/>
 	<view class="task-desc">
-		<l-textarea l-class="textarea-height" auto-height maxlength="300" placeholder="描述..." />
+		<l-textarea bind:lininput="getContentValue" l-class="textarea-height" auto-height maxlength="300" placeholder="描述..." />
 	</view>
-	<l-button size="long">提交</l-button>
+	<l-button size="long" bindtap="submitForm">提交</l-button>
 </view>
