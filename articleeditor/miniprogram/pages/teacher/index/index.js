@@ -12,7 +12,7 @@ Page({
     tasks: [],
     formData: {
       name: '',
-      no: ''
+      classNo: ''
     }
   },
 
@@ -21,7 +21,8 @@ Page({
    */
   onLoad: function (options) {
     let { userName, classes, tasks } = app.globalData.userData;
-    console.log(classes, tasks);
+    this.getClassroom();
+    // console.log(classes, tasks);
     // 获取该老师下面的班级
     // 获取该老师下面的作业
     this.setData({
@@ -30,9 +31,22 @@ Page({
       tasks
     })
   },
+  getClassroom:function(e){
+    wx.cloud.callFunction({
+      name: 'getClass',
+      data: {},
+      complete: (res) => {
+        console.log(res);
+      }
+    })
+  },
   showPupop: function (e) {
     this.setData({
-      showPopup: true
+      showPopup: true,
+      classroom: {
+        name: '',
+        classNo: ''
+      }
     })
   },
   inputChange: function (e) {
@@ -45,11 +59,7 @@ Page({
   },
   cancel: function (e) {
     this.setData({
-      showPopup: false,
-      classroom: {
-        name: '',
-        no: ''
-      }
+      showPopup: false
     })
   },
   submit: function (e) {
@@ -62,7 +72,7 @@ Page({
       })
       return false;
     }
-    if (!formData.no) {
+    if (!formData.classNo) {
       wx.lin.showMessage({
         content: '请输入班级号码'
       })
@@ -78,10 +88,6 @@ Page({
     this.setData({
       showPopup: false
     })
-    // wx.navigateTo({
-    //   url: '../classroom/classroom',
-    // })
-
   },
   gotoList: function (e) {
     let type = e.currentTarget.dataset;

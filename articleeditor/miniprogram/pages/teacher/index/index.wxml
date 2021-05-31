@@ -54,7 +54,7 @@
 		<view class='pupop-content'>
 			<view class="pupop-title">新增班级</view>
 			<l-input width='675' label="班级名称" data-type="name" placeholder="请输入班级名称" bind:lininput="inputChange" value="{{classroom.name}}" />
-			<l-input width='675' label="班级号码" data-type="no" placeholder="请输入班级号码" bind:lininput="inputChange" value="{{classroom.no}}" />
+			<l-input width='675' label="班级号码" data-type="classNo" placeholder="请输入班级号码" bind:lininput="inputChange" value="{{classroom.classNo}}" />
 			<view class="operate-btn">
 				<l-button plain="true" bindtap="cancel">取消</l-button>
 				<l-button bindtap="submit">新增</l-button>

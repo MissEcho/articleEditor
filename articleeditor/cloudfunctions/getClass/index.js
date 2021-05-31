@@ -1,16 +1,25 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
 
-cloud.init()
-
+cloud.init({
+  env: cloud.DYNAMIC_CURRENT_ENV
+})
+const db = cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
 
-  return {
-    event,
-    openid: wxContext.OPENID,
-    appid: wxContext.APPID,
-    unionid: wxContext.UNIONID,
+  try {
+    let res= await db.collection('classTable').where({
+      teacherId: wxContext.OPENID,
+    }).get({})
+    res.data.map(item=>{
+      let stu=await db.collection('classTable').where({
+        teacherId: wxContext.OPENID,
+      }).get({})
+    })
+    return res
+  } catch (e) {
+    console.error(e)
   }
 }
